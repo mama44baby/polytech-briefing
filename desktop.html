@@ -7,14 +7,12 @@
 <style>
   :root {
     --primary: #2563eb;
-    --track1-color: #dc2626;
-    --track1-bg: #fef2f2;
-    --track2-color: #2563eb;
-    --track2-bg: #eff6ff;
-    --track3-color: #16a34a;
-    --track3-bg: #f0fdf4;
-    --track4-color: #9333ea;
-    --track4-bg: #faf5ff;
+    --track1-color: #2563eb;
+    --track1-bg: #eff6ff;
+    --track2-color: #059669;
+    --track2-bg: #ecfdf5;
+    --track3-color: #d97706;
+    --track3-bg: #fffbeb;
     --border: #e2e8f0;
   }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; margin: 0; padding: 24px; }
@@ -27,43 +25,42 @@
 
   .notice-banner { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #16a34a; padding: 14px 18px; border-radius: 8px; margin-bottom: 28px; font-size: 14px; color: #166534; line-height: 1.5; }
 
-  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
-  .kpi-card { border-radius: 12px; padding: 18px; border: 1px solid var(--border); }
-  .kpi-card.t1 { background: var(--track1-bg); border-color: #fecaca; }
-  .kpi-card.t2 { background: var(--track2-bg); border-color: #bfdbfe; }
-  .kpi-card.t3 { background: var(--track3-bg); border-color: #bbf7d0; }
-  .kpi-card.t4 { background: var(--track4-bg); border-color: #e9d5ff; }
+  /* KPI Grid (3 Tracks) */
+  .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+  .kpi-card { border-radius: 12px; padding: 20px; border: 1px solid var(--border); }
+  .kpi-card.t1 { background: var(--track1-bg); border-color: #bfdbfe; }
+  .kpi-card.t2 { background: var(--track2-bg); border-color: #a7f3d0; }
+  .kpi-card.t3 { background: var(--track3-bg); border-color: #fde68a; }
   .kpi-title { font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
   .t1 .kpi-title { color: var(--track1-color); }
   .t2 .kpi-title { color: var(--track2-color); }
   .t3 .kpi-title { color: var(--track3-color); }
-  .t4 .kpi-title { color: var(--track4-color); }
-  .kpi-count { font-size: 28px; font-weight: 900; color: #0f172a; }
+  .kpi-count { font-size: 32px; font-weight: 900; color: #0f172a; }
   .kpi-desc { font-size: 12px; color: #64748b; margin-top: 4px; }
 
   /* Winter Roadmap Section */
-  .winter-section { background: #ffffff; border: 2px solid #6366f1; border-radius: 14px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.07); }
-  .winter-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0e7ff; padding-bottom: 14px; margin-bottom: 14px; }
-  .winter-title { font-size: 18px; font-weight: 800; color: #312e81; display: flex; align-items: center; gap: 8px; }
-  .winter-badge { background: #e0e7ff; color: #4338ca; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; }
-  .winter-tip { background: #f5f3ff; border-left: 4px solid #8b5cf6; padding: 12px 16px; border-radius: 6px; font-size: 13px; color: #4c1d95; line-height: 1.5; margin-bottom: 18px; }
+  .winter-section { background: #ffffff; border: 2px solid #3b82f6; border-radius: 14px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.08); }
+  .winter-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 14px; margin-bottom: 14px; }
+  .winter-title { font-size: 18px; font-weight: 800; color: #1e3a8a; display: flex; align-items: center; gap: 8px; }
+  .winter-badge { background: #eff6ff; color: #1d4ed8; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; border: 1px solid #bfdbfe; }
+  .winter-tip { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 6px; font-size: 13px; color: #1e293b; line-height: 1.5; margin-bottom: 18px; }
+  
   .badge-est-dday { display: inline-block; padding: 3px 8px; border-radius: 6px; font-weight: 800; font-size: 11px; background: #fee2e2; color: #b91c1c; white-space: nowrap; }
   .badge-track-pill { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-top: 4px; }
-  .pill-t1 { background: #fee2e2; color: #b91c1c; }
-  .pill-t2 { background: #dbeafe; color: #1d4ed8; }
-  .pill-t3 { background: #dcfce7; color: #15803d; }
-  .pill-t4 { background: #f3e8ff; color: #7e22ce; }
+  .pill-t1 { background: #dbeafe; color: #1d4ed8; }
+  .pill-t2 { background: #d1fae5; color: #047857; }
+  .pill-t3 { background: #fef3c7; color: #b45309; }
+  
   .checklist-box { font-size: 12px; line-height: 1.5; color: #334155; }
   .checklist-item { margin-bottom: 4px; display: flex; align-items: flex-start; gap: 4px; }
-  .btn-archive { display: inline-block; background: #4f46e5; color: #ffffff; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
-  .btn-archive:hover { background: #3730a3; }
+  .btn-archive { display: inline-block; background: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+  .btn-archive:hover { background: #2563eb; }
 
   .section-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; margin: 32px 0 14px; color: #0f172a; }
   .section-tag { font-size: 12px; padding: 3px 10px; border-radius: 6px; font-weight: 700; }
   .tag-t1 { background: var(--track1-bg); color: var(--track1-color); }
   .tag-t2 { background: var(--track2-bg); color: var(--track2-color); }
   .tag-t3 { background: var(--track3-bg); color: var(--track3-color); }
-  .tag-t4 { background: var(--track4-bg); color: var(--track4-color); }
 
   table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 13px; }
   th { background: #f8fafc; color: #475569; font-weight: 700; text-align: left; padding: 12px 14px; border-bottom: 2px solid var(--border); }
@@ -85,7 +82,7 @@
   <div class="header">
     <div class="title-area">
       <h1>한국폴리텍대학 아산캠퍼스 산학협력처 지원사업 브리핑</h1>
-      <p>충남·아산 관내 및 전국 국책사업 정밀 타깃팅 (타 지역 제한 공모 및 허수 배제)</p>
+      <p>산학협력처 핵심 3대 실무 트랙 기반 맞춤형 브리핑 (충남 RISE·앵커 포함)</p>
     </div>
     <div style="display: flex; gap: 8px; align-items: center;">
       <a href="mobile.html" target="_blank" style="background:#2563eb; color:#ffffff; padding:8px 14px; border-radius:30px; font-weight:700; font-size:13px; text-decoration:none; display:flex; align-items:center; gap:4px;"><span>📱</span><span>모바일 뷰</span></a>
@@ -94,30 +91,25 @@
   </div>
 
   <div class="notice-banner">
-    <strong>🎯 필터링 고도화 적용 완료:</strong> 타 시·도(부산·경기·서울 등) 전용 공모, 일반인 수강생 모집 공고, 과거 연도 마감 데이터를 원천 배제하고 <strong>아산캠퍼스 산학협력처가 진짜 입후보 및 참여 가능한 국책/관내 공모만 엄선</strong>했습니다.
+    <strong>🎯 산학협력처 3대 핵심 트랙 개편 완료:</strong> 복잡했던 기존 트랙을 <strong>[Track 1. 직무훈련&일학습]</strong>, <strong>[Track 2. 지자체·대학 협력 (RISE·앵커)]</strong>, <strong>[Track 3. 기업협력&R&D]</strong>의 3대 핵심 업무로 깔끔하게 통폐합하여 정보 확인의 피로도를 대폭 낮췄습니다.
   </div>
 
-  <!-- KPI SUMMARY -->
+  <!-- KPI SUMMARY (3 CARDS) -->
   <div class="kpi-grid">
     <div class="kpi-card t1">
-      <div class="kpi-title">Track 1. 직접 주관 수탁</div>
-      <div class="kpi-count">0<span style="font-size:16px; font-weight:normal;">건</span></div>
-      <div class="kpi-desc">인력양성·일자리 사업비 직접 수탁</div>
+      <div class="kpi-title">Track 1. 직무훈련 & 일학습</div>
+      <div class="kpi-count">2<span style="font-size:16px; font-weight:normal;">건</span></div>
+      <div class="kpi-desc">훈련과정·일학습(P-TECH)·ICT 교육 직접 운영</div>
     </div>
     <div class="kpi-card t2">
-      <div class="kpi-title">Track 2. 기업 공동 R&D</div>
-      <div class="kpi-count">12<span style="font-size:16px; font-weight:normal;">건</span></div>
-      <div class="kpi-desc">교수 연구팀 + 기업 컨소시엄</div>
+      <div class="kpi-title">Track 2. 지자체·대학 협력</div>
+      <div class="kpi-count">1<span style="font-size:16px; font-weight:normal;">건</span></div>
+      <div class="kpi-desc">충남 RISE 사업 및 앵커기업 연계 공모 전용</div>
     </div>
     <div class="kpi-card t3">
-      <div class="kpi-title">Track 3. 일학습·계약학과</div>
-      <div class="kpi-count">1<span style="font-size:16px; font-weight:normal;">건</span></div>
-      <div class="kpi-desc">P-TECH 및 특성화고 연계</div>
-    </div>
-    <div class="kpi-card t4">
-      <div class="kpi-title">Track 4. 장비·러닝팩토리</div>
-      <div class="kpi-count">2<span style="font-size:16px; font-weight:normal;">건</span></div>
-      <div class="kpi-desc">실습실 개방 및 수수료 바우처</div>
+      <div class="kpi-title">Track 3. 기업협력 & R&D</div>
+      <div class="kpi-count">14<span style="font-size:16px; font-weight:normal;">건</span></div>
+      <div class="kpi-desc">교수팀 기업 공동연구 & 러닝팩토리 장비수익</div>
     </div>
   </div>
 
@@ -125,25 +117,25 @@
   <div class="winter-section">
     <div class="winter-header">
       <div class="winter-title">
-        <span>🚀 [동계 집중 대비] 11월~2월 국비 대형 공모 & 필수 심사 선제대비 캘린더</span>
+        <span>🚀 [동계 집중 대비] 11월~2월 국비 & 충남 대형 공모 선제대비 캘린더</span>
       </div>
-      <div class="winter-badge">D-Day 자동 연산 & 작년 원문 링크 연동</div>
+      <div class="winter-badge">D-Day 자동 연산 & 전년도 공고 연동</div>
     </div>
     <div class="winter-tip">
-      <strong>💡 선제대응 필요성:</strong> 고용부·중기부·과기부 국비 대형 공모(수억~수십억 원)는 통상 공고 후 접수 마감까지 <strong>20~30일에 불과</strong>합니다. 공고 후 착수하면 협약기업 모집(LoI) 및 제안서 집필이 촉박하므로, <strong>전년도 공고문과 평가표를 검토하며 10~11월 지금부터 선제 준비</strong>에 착수해야 수주 경쟁력을 확보할 수 있습니다.
+      <strong>💡 선제대응 필요성:</strong> 정부 및 충남도 대형 공모(수억~수십억 원)는 통상 공고 후 접수 마감까지 <strong>20~30일에 불과</strong>합니다. 공고 발표 후 착수하면 협약기업 모집(LoI) 및 제안서 집필이 촉박하므로, <strong>충남 RISE, 앵커사업, K-디지털, 일학습 등 핵심 과제는 지금부터 사전 준비</strong>에 착수해야 수주 경쟁력을 확보할 수 있습니다.
     </div>
     <table>
       <thead>
         <tr>
-          <th style="width: 12%; text-align: center;">예상 시기</th>
-          <th style="width: 25%;">대형 사업명 (주관기관)</th>
-          <th style="width: 18%;">예산 규모 & 산단 트랙</th>
-          <th style="width: 35%;">지금(10~11월) 선제 대응 액션 (Checklist)</th>
-          <th style="width: 10%; text-align: center;">전년도 공고</th>
+          <th style="width: 14%; text-align: center;">예상 시기 (D-Day)</th>
+          <th style="width: 28%;">사업명 및 주관기관</th>
+          <th style="width: 20%;">지원 규모 및 트랙</th>
+          <th style="width: 28%;">산학협력처 사전 준비 액션 (Checklist)</th>
+          <th style="width: 10%; text-align: center;">공식 사이트</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">11월 중순</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-23</span></div>
@@ -154,16 +146,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">차년도 훈련센터 운영비 승인 및 훈련과정 적합성 인정</div>
-            <div><span class="badge-track-pill pill-t1">Track 1/3 · 필수 연간 심사</span></div>
+            <div><span class="badge-track-pill pill-t1">Track 1 · 직무훈련 & 일학습</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>2027년도 학과별 신규 참여기업(협약기업) 훈련계획서 취합 및 등록</span></div><div class="checklist-item"><span>📌</span><span>NCS 기반 일학습병행·P-TECH 개편 훈련과정 적합성 심사 신청</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.hrd.go.kr" target="_blank">HRD-Net</a>
+            <a class="btn-archive" href="https://www.hrd.go.kr" target="_blank">HRD-Net &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">11월 말</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-38</span></div>
@@ -174,16 +166,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">차년도 신규과제 RFP 반영 (수억~수십억 원)</div>
-            <div><span class="badge-track-pill pill-t2">Track 2 · 차년도 R&D 기획</span></div>
+            <div><span class="badge-track-pill pill-t3">Track 3 · 기업협력 & R&D</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>아산캠퍼스 교수진 주력 기술(AI·반도체·스마트팩토리) 기술수요조사 제안서 제출</span></div><div class="checklist-item"><span>📌</span><span>충남 주력산업 협약기업 연계 산학 공동R&D 수요 사전 등록</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.smtech.go.kr" target="_blank">SMTECH 수요조사</a>
+            <a class="btn-archive" href="https://www.smtech.go.kr" target="_blank">SMTECH 수요조사 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">12월 말</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-62</span></div>
@@ -194,19 +186,39 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">연 5억 ~ 10억 원 (다년도 인프라·운영비)</div>
-            <div><span class="badge-track-pill pill-t1">Track 1 · 직접 주관 수탁</span></div>
+            <div><span class="badge-track-pill pill-t1">Track 1 · 직무훈련 & 일학습</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>캠퍼스 내 개방형 디지털 훈련실/실습 공간 점검 (러닝팩토리 연계)</span></div><div class="checklist-item"><span>📌</span><span>천안·아산 관내 중소기업 재직자 디지털 전환(DX) 훈련 수요 조사</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.hrdkorea.or.kr" target="_blank">산인공 공고</a>
+            <a class="btn-archive" href="https://www.hrdkorea.or.kr" target="_blank">산인공 공고 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="background: #f0fdf4;">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">12월 말 ~ 1월 초</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-66</span></div>
+          </td>
+          <td>
+            <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-bottom: 4px;"><span style="background:#059669; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; font-weight:700; margin-right:5px;">충남 특화</span>충남 RISE 사업 (지역혁신중심 대학지원체계) 지자체-대학 협력 공모</div>
+            <div style="font-size: 12px; color: #64748b;">주관: 교육부 / 충청남도청 / 충남RISE센터</div>
+          </td>
+          <td>
+            <div style="font-weight: 700; color: #1e293b; font-size: 12px;">도내 대학 연간 총 수천억 원 (단과대·사업단 단위 수억~수십억 원)</div>
+            <div><span class="badge-track-pill pill-t2">Track 2 · 지자체·대학 협력</span></div>
+          </td>
+          <td>
+            <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>충남 4대 주력산업(미래모빌리티, 디스플레이, 반도체, 이차전지) 실무형 기술인재 양성 커리큘럼 설계</span></div><div class="checklist-item"><span>📌</span><span>충남 RISE 혁신과제 및 대학 간 공유·협력 트랙 참여 계획 수립, 관내 앵커기업 채용약정 풀 연계</span></div></div>
+          </td>
+          <td style="text-align: center;">
+            <a class="btn-archive" href="https://www.cnrise.or.kr" target="_blank">충남RISE센터 &rarr;</a>
+          </td>
+        </tr>
+        <tr style="">
+          <td style="text-align: center;">
+            <div style="font-weight: 800; color: #1e293b; font-size: 13px;">12월 말 ~ 1월 초</div>
+            <div style="margin-top: 4px;"><span class="badge-est-dday">D-68</span></div>
           </td>
           <td>
             <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-bottom: 4px;">지역·산업맞춤형 일자리창출 지원사업 (지산맞)</div>
@@ -214,16 +226,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">프로젝트당 1억 ~ 5억 원 (도비/국비 매칭)</div>
-            <div><span class="badge-track-pill pill-t1">Track 1 · 직접 위탁 운영</span></div>
+            <div><span class="badge-track-pill pill-t2">Track 2 · 지자체·대학 협력</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>충남 주력 제조산업(디스플레이, 모빌리티, 반도체패키징) 교육과정 기획</span></div><div class="checklist-item"><span>📌</span><span>충남일자리경제진흥원 및 충남TP 담당부서 사전 실무 협의</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.chungnam.go.kr" target="_blank">충남도청 공고</a>
+            <a class="btn-archive" href="https://www.chungnam.go.kr" target="_blank">충남도청 공고 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">1월 초</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-74</span></div>
@@ -234,16 +246,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">참여기관당 1.5억 ~ 2억 원</div>
-            <div><span class="badge-track-pill pill-t1">Track 1/3 · 직접수탁 & P-TECH</span></div>
+            <div><span class="badge-track-pill pill-t1">Track 1 · 직무훈련 & 일학습</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>천안공고, 아산스마트팩토리마이스터고 등 충남 직업계고 사전 협의</span></div><div class="checklist-item"><span>📌</span><span>기술사관 및 산학맞춤반 참여 희망 기업 Pool 사전 매칭</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="file:///D:/지원사업조사/2026년_중소기업_특성화고_인력양성사업_참여기관_모집공고.pdf" target="_blank">전년공고(PDF)</a>
+            <a class="btn-archive" href="file:///D:/지원사업조사/2026년_중소기업_특성화고_인력양성사업_참여기관_모집공고.pdf" target="_blank">전년공고(PDF) &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">1월 초</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-77</span></div>
@@ -254,16 +266,36 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">시설장비비 및 프로그램 개발비 지원 (최대 수십억)</div>
-            <div><span class="badge-track-pill pill-t1">Track 1 · 공동훈련센터 운영</span></div>
+            <div><span class="badge-track-pill pill-t1">Track 1 · 직무훈련 & 일학습</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>아산/천안 산업단지 내 협약기업 30~50개사 사전 수요조사(LoI) 확보</span></div><div class="checklist-item"><span>📌</span><span>공동훈련센터 전용 강의실 및 공동실습 인프라 확보 계획 수립</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.ksqa.or.kr" target="_blank">심평원 공모</a>
+            <a class="btn-archive" href="https://www.ksqa.or.kr" target="_blank">심평원 공모 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="background: #f0fdf4;">
+          <td style="text-align: center;">
+            <div style="font-weight: 800; color: #1e293b; font-size: 13px;">1월 중순</div>
+            <div style="margin-top: 4px;"><span class="badge-est-dday">D-84</span></div>
+          </td>
+          <td>
+            <div style="font-size: 13px; font-weight: 800; color: #0f172a; margin-bottom: 4px;"><span style="background:#059669; color:#fff; font-size:11px; padding:2px 6px; border-radius:4px; font-weight:700; margin-right:5px;">충남 특화</span>충남 지역성장 인재양성체계 (ANCHOR·앵커) 기업-대학 연계 공모</div>
+            <div style="font-size: 12px; color: #64748b;">주관: 충청남도청 / 충남테크노파크 (CTP)</div>
+          </td>
+          <td>
+            <div style="font-weight: 700; color: #1e293b; font-size: 12px;">과제당 1억 ~ 5억 원 내외 (도비/시비 지원)</div>
+            <div><span class="badge-track-pill pill-t2">Track 2 · 지자체·대학 협력</span></div>
+          </td>
+          <td>
+            <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>천안·아산 관내 앵커기업(삼성디스플레이, 현대차 아산공장 1차 협력사 등)과 사전 산학협약(LoI) 체결</span></div><div class="checklist-item"><span>📌</span><span>기업 현장 밀착형 실무 훈련 및 산학 공동 실증 스튜디오/테스트베드 구축 계획 기획</span></div></div>
+          </td>
+          <td style="text-align: center;">
+            <a class="btn-archive" href="https://www.ctp.or.kr" target="_blank">충남TP 공고 &rarr;</a>
+          </td>
+        </tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">1월 말</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-94</span></div>
@@ -274,16 +306,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">예비연구 0.5억 / 본연구 1.5~2억 원</div>
-            <div><span class="badge-track-pill pill-t2">Track 2 · 기업 공동 R&D</span></div>
+            <div><span class="badge-track-pill pill-t3">Track 3 · 기업협력 & R&D</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>아산캠퍼스 전임교원 보유 특허 및 기술지도 분야 조사서 취합</span></div><div class="checklist-item"><span>📌</span><span>기술이전 및 산학 공동개발 희망 아산/천안 가족회사 1:1 매칭</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.smtech.go.kr" target="_blank">SMTECH 공고</a>
+            <a class="btn-archive" href="https://www.smtech.go.kr" target="_blank">SMTECH 공고 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">1월 말</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-97</span></div>
@@ -294,16 +326,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">연구인력 1인당 연간 인건비 50% 지원 (최대 5,000만)</div>
-            <div><span class="badge-track-pill pill-t2">Track 2 · 연구인력 지원</span></div>
+            <div><span class="badge-track-pill pill-t3">Track 3 · 기업협력 & R&D</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>기업 부설연구소를 보유한 충남 관내 강소기업 채용 수요 조사</span></div><div class="checklist-item"><span>📌</span><span>폴리텍 졸업예정 우수인재 및 대학 연구보조인력 매칭 풀 구성</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.koita.or.kr" target="_blank">KOITA 공고</a>
+            <a class="btn-archive" href="https://www.koita.or.kr" target="_blank">KOITA 공고 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">2월 초</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-105</span></div>
@@ -314,16 +346,16 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">충청권 컨소시엄 (연간 수억 원 교육비)</div>
-            <div><span class="badge-track-pill pill-t1">Track 1 · 직접 주관 수탁</span></div>
+            <div><span class="badge-track-pill pill-t1">Track 1 · 직무훈련 & 일학습</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>AI, IoT, 제조데이터 분석 실습 표준 커리큘럼 강의계획서 기획</span></div><div class="checklist-item"><span>📌</span><span>외부 전문 강사진 풀 및 PC실습실 소프트웨어 라이선스 점검</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.nipa.kr" target="_blank">NIPA 공고</a>
+            <a class="btn-archive" href="https://www.nipa.kr" target="_blank">NIPA 공고 &rarr;</a>
           </td>
         </tr>
-        <tr>
+        <tr style="">
           <td style="text-align: center;">
             <div style="font-weight: 800; color: #1e293b; font-size: 13px;">2월 초</div>
             <div style="margin-top: 4px;"><span class="badge-est-dday">D-110</span></div>
@@ -334,13 +366,13 @@
           </td>
           <td>
             <div style="font-weight: 700; color: #1e293b; font-size: 12px;">기업당 최대 5,000만 원 (대학 장비사용 수수료)</div>
-            <div><span class="badge-track-pill pill-t4">Track 4 · 러닝팩토리 장비수익</span></div>
+            <div><span class="badge-track-pill pill-t3">Track 3 · 기업협력 & R&D</span></div>
           </td>
           <td>
             <div class="checklist-box"><div class="checklist-item"><span>📌</span><span>아산캠퍼스 러닝팩토리 보유 정밀가공/3D프린터 등 장비 풀 점검</span></div><div class="checklist-item"><span>📌</span><span>혁신바우처 플랫폼 공급기관 등록 정보 및 수수료 체계 정비</span></div></div>
           </td>
           <td style="text-align: center;">
-            <a class="btn-archive" href="https://www.mssmiv.com" target="_blank">혁신바우처</a>
+            <a class="btn-archive" href="https://www.mssmiv.com" target="_blank">혁신바우처 &rarr;</a>
           </td>
         </tr>
       </tbody>
@@ -349,54 +381,47 @@
 
   <!-- TRACK 1 TABLE -->
   <div class="section-title">
-    <span>Track 1. [직접 주관] 인력양성·일자리 창출 위탁 사업</span>
-    <span class="section-tag tag-t1">산단 직접 수주 (0건)</span>
-  </div>
-  <div class="empty-box">
-    <strong>ℹ️ 현재 접수 중인 직접 주관 대형 인력양성 공모는 없습니다.</strong><br>
-    <span style="font-size:12px; color:#94a3b8; margin-top:4px; display:inline-block;">(K-디지털 플랫폼, 공동훈련센터, 지산맞 등 정부 대형 인력양성 공모는 매년 12월~2월에 집중 공고됩니다.)</span>
-  </div>
-  <!-- TRACK 2 TABLE -->
-  <div class="section-title">
-    <span>Track 2. [산학연 R&D] 기업-대학 컨소시엄 공동 기술개발</span>
-    <span class="section-tag tag-t2">교수팀 매칭 (12건)</span>
+    <span>Track 1. [직무훈련 & 일학습] 인력양성 및 교육과정 직접 운영 트랙</span>
+    <span class="section-tag tag-t1">훈련·일학습·ICT 교육 (2건)</span>
   </div>
   <table>
     <thead><tr><th style="width: 12%;">마감일</th><th style="width: 42%;">공고명</th><th style="width: 20%;">공고기관</th><th style="width: 18%;">추천 액션</th><th style="width: 8%;">링크</th></tr></thead>
     <tbody>
-      <tr><td><span class="badge-dday">2026-11-11</span></td><td><strong>「2026년 강원연구개발특구육성(R&D)사업」 강원 특구 배치 프로그램 1기 참여기업 모집공고</strong></td><td>재단법인 강원창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179596" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-10-27</span></td><td><strong>[강원ICT융합연구원] 강원 미래산업 AX혁신과 지산학연 신사업 발굴 포럼</strong></td><td>강원대 강릉산학협력단 강원ICT융합연구원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179592" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-10-30</span></td><td><strong>2026 중소기업AI훈련 맞춤 컨설팅 100% 정부지원 프로그램 참여기업 모집모집</strong></td><td>중소기업AI훈련확산센터대한상공회의소 경기인력개발원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=177466" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-12-31</span></td><td><strong>2026년 3D프린팅 전문기술 활용지원 사업</strong></td><td>쓰리디프린팅연구조합</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=176442" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-12-31</span></td><td><strong>바이오 협력, 지금 시작하세요 – "BioLink Starup Hub"에서 필요한 기술을 찾고, 가진 기술을 연결하세요!</strong></td><td>충북창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=173424" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-11</span></td><td><strong>2026년 강원연구개발특구육성(R&D)사업 강원 특구 배치 프로그램 1기 창업기업 모집 공고</strong></td><td>강원특별자치도 / 강원창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127411" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-10-30</span></td><td><strong>[세종] 2026 중부권 지역혁신클러스터육성사업(비R&D) 기업지원 수혜기업 모집 공고</strong></td><td>세종특별자치시 / 세종지역산업진흥원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127335" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-13</span></td><td><strong>2026년 미래개척융합과학기술개발사업(한계돌파 R&D) 신규과제 공고</strong></td><td>과학기술정보통신부 / 한국연구재단</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127199" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-12</span></td><td><strong>2026년 지역거점 AX 혁신 기술개발 사업 신규지원 대상과제 공고 (공정ㆍ응용 솔루션 AX R&D, 응용 제품 AX R&D)</strong></td><td>산업통상부 / 대구디지털혁신진흥원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127197" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-10</span></td><td><strong>2026년 에너지기술 수용성 제고 및 사업화 촉진 사업 신규지원 대상 연구개발과제 공고</strong></td><td>기후에너지환경부 / 한국에너지기술평가원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127129" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-02</span></td><td><strong>2027년 민ㆍ군규격표준화사업 신규 연구개발과제 공고</strong></td><td>방위사업청 / 국방기술품질원</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127000" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-11-05</span></td><td><strong>2026년 제7차 중소기업 R&D 전담은행 투자지원 추천기업(기술사업화 패키지 및 TIPA ValueUP) 모집 공고</strong></td><td>SMTECH(중소기업기술정보진흥원)</td><td><span class="action-box">학과 교수 연구팀 매칭 및 협약기업 1:1 컨소시엄 지원</span></td><td><a class="btn" href="https://www.smtech.go.kr/front/ifg/no/notice02_detail.do?buclYy=&ancmId=S02883&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">상시 접수</span></td><td><strong>[충남] 2026년 충남형 계약학과 우수기업 발굴 지원 협의체 참여기업 모집 공고</strong></td><td>교육부 / 충남테크노파크</td><td><span class="action-box">산학협력처 직접 주관 교육훈련 제안서 제출 및 협약기업 풀 구성</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126610" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-30</span></td><td><strong>2026년 중소기업 특성화고 인력양성사업 참여기업 모집 공고</strong></td><td>중소벤처기업부 / 한국경영혁신중소기업협회</td><td><span class="action-box">산학협력처 직접 주관 교육훈련 제안서 제출 및 협약기업 풀 구성</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126507" target="_blank">공고보기</a></td></tr>
+    </tbody></table>
+  <!-- TRACK 2 TABLE -->
+  <div class="section-title">
+    <span>Track 2. [지자체·대학 협력] 충남도청·충남TP 지역혁신 & 앵커기업 연계 트랙</span>
+    <span class="section-tag tag-t2">충남 RISE · 앵커사업 (1건)</span>
+  </div>
+  <table>
+    <thead><tr><th style="width: 12%;">마감일</th><th style="width: 42%;">공고명</th><th style="width: 20%;">공고기관</th><th style="width: 18%;">추천 액션</th><th style="width: 8%;">링크</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge-dday">예산 소진시까지</span></td><td><strong>[충남] 당진시 2026년 청년 취ㆍ창업 지원사업 디자인 개선 지원 사업 참여 기업 모집 공고</strong></td><td>충청남도 / 충남산학융합원</td><td><span class="action-box">충남 RISE센터/충남TP 사업단 협의 및 관내 앵커기업 컨소시엄 기획</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349" target="_blank">공고보기</a></td></tr>
     </tbody></table>
   <!-- TRACK 3 TABLE -->
   <div class="section-title">
-    <span>Track 3. [폴리텍 특화] 일학습병행(P-TECH) & 계약학과 연계</span>
-    <span class="section-tag tag-t3">특성화고 연계 (1건)</span>
+    <span>Track 3. [기업협력 & R&D] 산학 공동연구 & 러닝팩토리 장비 활용 트랙</span>
+    <span class="section-tag tag-t3">공동 R&D & 장비 바우처 (14건)</span>
   </div>
   <table>
     <thead><tr><th style="width: 12%;">마감일</th><th style="width: 42%;">공고명</th><th style="width: 20%;">공고기관</th><th style="width: 18%;">추천 액션</th><th style="width: 8%;">링크</th></tr></thead>
     <tbody>
-      <tr><td><span class="badge-open">상시 접수</span></td><td><strong>[충남] 2026년 충남형 계약학과 우수기업 발굴 지원 협의체 참여기업 모집 공고</strong></td><td>교육부 / 충남테크노파크</td><td><span class="action-box">P-TECH 참여기업 풀 연계 및 특성화고-기업 협약 추진</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126610" target="_blank">공고보기</a></td></tr>
-    </tbody></table>
-  <!-- TRACK 4 TABLE -->
-  <div class="section-title">
-    <span>Track 4. [인프라 수익] 러닝팩토리 & 연구장비 바우처 활용</span>
-    <span class="section-tag tag-t4">장비 개방 (2건)</span>
-  </div>
-  <table>
-    <thead><tr><th style="width: 12%;">마감일</th><th style="width: 42%;">공고명</th><th style="width: 20%;">공고기관</th><th style="width: 18%;">추천 액션</th><th style="width: 8%;">링크</th></tr></thead>
-    <tbody>
-      <tr><td><span class="badge-dday">2026-11-03</span></td><td><strong><2026년 시제품 고도화 바우처 지원 프로그램> 참여 기업 모집 (~11.3.14시)</strong></td><td>충북대학교 충북Pro메이커센터</td><td><span class="action-box">러닝팩토리/공동실습장 장비 개방 및 사용 수수료 정산</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179601" target="_blank">공고보기</a></td></tr>
-      <tr><td><span class="badge-dday">2026-10-23</span></td><td><strong>[대전] 2026년 3차 대덕특구 기업 애로해결 바우처 지원사업(이노폴리스캠퍼스 사업(원스톱 지원 센터 운영사업))</strong></td><td>과학기술정보통신부 / 대전창조경제혁신센터</td><td><span class="action-box">러닝팩토리/공동실습장 장비 개방 및 사용 수수료 정산</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127033" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-03</span></td><td><strong><2026년 시제품 고도화 바우처 지원 프로그램> 참여 기업 모집 (~11.3.14시)</strong></td><td>충북대학교 충북Pro메이커센터</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179601" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-11</span></td><td><strong>「2026년 강원연구개발특구육성(R&D)사업」 강원 특구 배치 프로그램 1기 참여기업 모집공고</strong></td><td>재단법인 강원창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179596" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-10-27</span></td><td><strong>[강원ICT융합연구원] 강원 미래산업 AX혁신과 지산학연 신사업 발굴 포럼</strong></td><td>강원대 강릉산학협력단 강원ICT융합연구원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=179592" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-10-30</span></td><td><strong>2026 중소기업AI훈련 맞춤 컨설팅 100% 정부지원 프로그램 참여기업 모집모집</strong></td><td>중소기업AI훈련확산센터대한상공회의소 경기인력개발원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=177466" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-12-31</span></td><td><strong>2026년 3D프린팅 전문기술 활용지원 사업</strong></td><td>쓰리디프린팅연구조합</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=176442" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-12-31</span></td><td><strong>바이오 협력, 지금 시작하세요 – "BioLink Starup Hub"에서 필요한 기술을 찾고, 가진 기술을 연결하세요!</strong></td><td>충북창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=173424" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-11</span></td><td><strong>2026년 강원연구개발특구육성(R&D)사업 강원 특구 배치 프로그램 1기 창업기업 모집 공고</strong></td><td>강원특별자치도 / 강원창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127411" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-10-30</span></td><td><strong>[세종] 2026 중부권 지역혁신클러스터육성사업(비R&D) 기업지원 수혜기업 모집 공고</strong></td><td>세종특별자치시 / 세종지역산업진흥원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127335" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-13</span></td><td><strong>2026년 미래개척융합과학기술개발사업(한계돌파 R&D) 신규과제 공고</strong></td><td>과학기술정보통신부 / 한국연구재단</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127199" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-12</span></td><td><strong>2026년 지역거점 AX 혁신 기술개발 사업 신규지원 대상과제 공고 (공정ㆍ응용 솔루션 AX R&D, 응용 제품 AX R&D)</strong></td><td>산업통상부 / 대구디지털혁신진흥원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127197" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-10</span></td><td><strong>2026년 에너지기술 수용성 제고 및 사업화 촉진 사업 신규지원 대상 연구개발과제 공고</strong></td><td>기후에너지환경부 / 한국에너지기술평가원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127129" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-10-23</span></td><td><strong>[대전] 2026년 3차 대덕특구 기업 애로해결 바우처 지원사업(이노폴리스캠퍼스 사업(원스톱 지원 센터 운영사업))</strong></td><td>과학기술정보통신부 / 대전창조경제혁신센터</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127033" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-02</span></td><td><strong>2027년 민ㆍ군규격표준화사업 신규 연구개발과제 공고</strong></td><td>방위사업청 / 국방기술품질원</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127000" target="_blank">공고보기</a></td></tr>
+      <tr><td><span class="badge-dday">2026-11-05</span></td><td><strong>2026년 제7차 중소기업 R&D 전담은행 투자지원 추천기업(기술사업화 패키지 및 TIPA ValueUP) 모집 공고</strong></td><td>SMTECH(중소기업기술정보진흥원)</td><td><span class="action-box">학과 교수 연구팀 매칭, 기업 공동개발 또는 러닝팩토리 장비 연계</span></td><td><a class="btn" href="https://www.smtech.go.kr/front/ifg/no/notice02_detail.do?buclYy=&ancmId=S02883&buclCd=S9171&dtlAncmSn=1&schdSe=MO5005&aplySn=1&searchCondition=&searchKeyword=&pageIndex=1" target="_blank">공고보기</a></td></tr>
     </tbody></table>
 </div>
 </body>
