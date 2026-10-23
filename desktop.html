@@ -15,6 +15,7 @@
     --track3-bg: #fffbeb;
     --border: #e2e8f0;
   }
+  html { scroll-behavior: smooth; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; margin: 0; padding: 24px; }
   .container { max-width: 1240px; margin: 0 auto; background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); padding: 36px; }
   
@@ -27,7 +28,8 @@
 
   /* KPI Grid (3 Tracks) */
   .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
-  .kpi-card { border-radius: 12px; padding: 20px; border: 1px solid var(--border); }
+  .kpi-card { border-radius: 12px; padding: 20px; border: 1px solid var(--border); text-decoration: none; display: block; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .kpi-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.07); }
   .kpi-card.t1 { background: var(--track1-bg); border-color: #bfdbfe; }
   .kpi-card.t2 { background: var(--track2-bg); border-color: #a7f3d0; }
   .kpi-card.t3 { background: var(--track3-bg); border-color: #fde68a; }
@@ -37,6 +39,10 @@
   .t3 .kpi-title { color: var(--track3-color); }
   .kpi-count { font-size: 32px; font-weight: 900; color: #0f172a; }
   .kpi-desc { font-size: 12px; color: #64748b; margin-top: 4px; }
+  .kpi-link-hint { font-size: 11px; font-weight: 700; margin-top: 10px; display: flex; align-items: center; gap: 4px; opacity: 0.9; }
+  .t1 .kpi-link-hint { color: var(--track1-color); }
+  .t2 .kpi-link-hint { color: var(--track2-color); }
+  .t3 .kpi-link-hint { color: var(--track3-color); }
 
   /* Winter Roadmap Section */
   .winter-section { background: #ffffff; border: 2px solid #3b82f6; border-radius: 14px; padding: 24px; margin-bottom: 32px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.08); }
@@ -56,7 +62,7 @@
   .btn-archive { display: inline-block; background: #0f172a; color: #ffffff; text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
   .btn-archive:hover { background: #2563eb; }
 
-  .section-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; margin: 32px 0 14px; color: #0f172a; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; margin: 36px 0 14px; color: #0f172a; scroll-margin-top: 24px; }
   .section-tag { font-size: 12px; padding: 3px 10px; border-radius: 6px; font-weight: 700; }
   .tag-t1 { background: var(--track1-bg); color: var(--track1-color); }
   .tag-t2 { background: var(--track2-bg); color: var(--track2-color); }
@@ -91,26 +97,29 @@
   </div>
 
   <div class="notice-banner">
-    <strong>🎯 산학협력처 3대 핵심 트랙 개편 완료:</strong> 복잡했던 기존 트랙을 <strong>[Track 1. 직무훈련&일학습]</strong>, <strong>[Track 2. 지자체·대학 협력 (RISE·앵커)]</strong>, <strong>[Track 3. 기업협력&R&D]</strong>의 3대 핵심 업무로 깔끔하게 통폐합하여 정보 확인의 피로도를 대폭 낮췄습니다.
+    <strong>🎯 산학협력처 3대 핵심 트랙 개편 완료:</strong> 복잡했던 기존 트랙을 <strong>[Track 1. 직무훈련&일학습]</strong>, <strong>[Track 2. 지자체·대학 협력 (RISE·앵커)]</strong>, <strong>[Track 3. 기업협력&R&D]</strong>의 3대 핵심 업무로 깔끔하게 통폐합하여 정보 확인의 피로도를 대폭 낮췄습니다. (상단 트랙 카드를 클릭하시면 아래 해당 목록으로 바로 이동합니다.)
   </div>
 
-  <!-- KPI SUMMARY (3 CARDS) -->
+  <!-- KPI SUMMARY (3 CLICKABLE CARDS) -->
   <div class="kpi-grid">
-    <div class="kpi-card t1">
+    <a href="#section-track1" class="kpi-card t1" title="Track 1 상세 목록으로 이동">
       <div class="kpi-title">Track 1. 직무훈련 & 일학습</div>
       <div class="kpi-count">2<span style="font-size:16px; font-weight:normal;">건</span></div>
       <div class="kpi-desc">훈련과정·일학습(P-TECH)·ICT 교육 직접 운영</div>
-    </div>
-    <div class="kpi-card t2">
+      <div class="kpi-link-hint">상세 목록 바로가기 &darr;</div>
+    </a>
+    <a href="#section-track2" class="kpi-card t2" title="Track 2 상세 목록으로 이동">
       <div class="kpi-title">Track 2. 지자체·대학 협력</div>
       <div class="kpi-count">1<span style="font-size:16px; font-weight:normal;">건</span></div>
       <div class="kpi-desc">충남 RISE 사업 및 앵커기업 연계 공모 전용</div>
-    </div>
-    <div class="kpi-card t3">
+      <div class="kpi-link-hint">상세 목록 바로가기 &darr;</div>
+    </a>
+    <a href="#section-track3" class="kpi-card t3" title="Track 3 상세 목록으로 이동">
       <div class="kpi-title">Track 3. 기업협력 & R&D</div>
       <div class="kpi-count">14<span style="font-size:16px; font-weight:normal;">건</span></div>
       <div class="kpi-desc">교수팀 기업 공동연구 & 러닝팩토리 장비수익</div>
-    </div>
+      <div class="kpi-link-hint">상세 목록 바로가기 &darr;</div>
+    </a>
   </div>
 
   <!-- WINTER ROADMAP SECTION -->
@@ -380,7 +389,7 @@
   </div>
 
   <!-- TRACK 1 TABLE -->
-  <div class="section-title">
+  <div class="section-title" id="section-track1">
     <span>Track 1. [직무훈련 & 일학습] 인력양성 및 교육과정 직접 운영 트랙</span>
     <span class="section-tag tag-t1">훈련·일학습·ICT 교육 (2건)</span>
   </div>
@@ -391,7 +400,7 @@
       <tr><td><span class="badge-dday">2026-11-30</span></td><td><strong>2026년 중소기업 특성화고 인력양성사업 참여기업 모집 공고</strong></td><td>중소벤처기업부 / 한국경영혁신중소기업협회</td><td><span class="action-box">산학협력처 직접 주관 교육훈련 제안서 제출 및 협약기업 풀 구성</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126507" target="_blank">공고보기</a></td></tr>
     </tbody></table>
   <!-- TRACK 2 TABLE -->
-  <div class="section-title">
+  <div class="section-title" id="section-track2">
     <span>Track 2. [지자체·대학 협력] 충남도청·충남TP 지역혁신 & 앵커기업 연계 트랙</span>
     <span class="section-tag tag-t2">충남 RISE · 앵커사업 (1건)</span>
   </div>
@@ -401,7 +410,7 @@
       <tr><td><span class="badge-dday">예산 소진시까지</span></td><td><strong>[충남] 당진시 2026년 청년 취ㆍ창업 지원사업 디자인 개선 지원 사업 참여 기업 모집 공고</strong></td><td>충청남도 / 충남산학융합원</td><td><span class="action-box">충남 RISE센터/충남TP 사업단 협의 및 관내 앵커기업 컨소시엄 기획</span></td><td><a class="btn" href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349" target="_blank">공고보기</a></td></tr>
     </tbody></table>
   <!-- TRACK 3 TABLE -->
-  <div class="section-title">
+  <div class="section-title" id="section-track3">
     <span>Track 3. [기업협력 & R&D] 산학 공동연구 & 러닝팩토리 장비 활용 트랙</span>
     <span class="section-tag tag-t3">공동 R&D & 장비 바우처 (14건)</span>
   </div>
